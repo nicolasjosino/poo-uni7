@@ -1,7 +1,5 @@
 public class Data {
 
-  public static final int DIAS_NO_ANO = 365;
-
   private final Integer dia;
   private final Integer mes;
   private final Integer ano;
