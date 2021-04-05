@@ -1,9 +1,13 @@
 import java.util.*;
+import banco.Produto;
+import banco.produtos.*;
 
 public class Main {
 
   public static void main(String[] args) {
     ContaPoupanca.setSelic(10);
+
+    ContaCorrente.soma(1, 2);
 
     ContaPoupanca cp1 = new ContaPoupanca();
     cp1.setConta(1);

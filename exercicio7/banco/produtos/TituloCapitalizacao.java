@@ -1,3 +1,5 @@
+package banco.produtos;
+
 public class TituloCapitalizacao extends Produto {
 
   public void calcularRendimento() {

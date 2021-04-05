@@ -1,10 +1,14 @@
-public abstract class Produto implements Imprimivel {
+package banco;
+
+public abstract class Produto {
 
   private String nome;
   private String cpf;
   private int conta;
   private int agencia;
   private double saldo;
+
+  protected String senha;
 
   public abstract void calcularRendimento();
   public abstract String getTipo();

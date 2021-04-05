@@ -1,3 +1,5 @@
+package banco.produtos;
+
 public class ContaCorrente extends Produto {
 
   public void calcularRendimento() {
@@ -8,6 +10,10 @@ public class ContaCorrente extends Produto {
 
   public String getTipo() {
     return "Conta Corrente";
+  }
+
+  static int soma(int a, int b) {
+    return a + b;
   }
 
 }
