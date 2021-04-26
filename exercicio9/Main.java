@@ -1,30 +1,38 @@
-public class Main {
+import java.util.Scanner;
 
+public class Main {
   public static void main(String[] args) {
     ContaPoupanca poupanca = new ContaPoupanca();
+    Scanner scanner = new Scanner(System.in);
 
-    try {
-      poupanca.depositar(100);
-      poupanca.depositar(-10);
-    } catch (Exception e) {
-      System.out.println("deu erro no deposito");
-    }
+    int opcao = 0;
+    do {
+      System.out.println("Digite a opção desejada:");
+      System.out.println("1 - Sacar");
+      System.out.println("2 - Depositar");
+      System.out.println("0 - Sair do sistema");
+      System.out.print("Sua opção: ");
+      opcao = scanner.nextInt();
 
-    try {
-      poupanca.sacar(5);
-      poupanca.sacar(500);
-    } catch (SaldoInsuficienteException e) {
-      System.out.println(e.getMessage());
-
-    } catch (SaqueNegativoException e) {
-      System.out.println("tá bebado? não dá pra sacar negativo!!!");
-    } catch (Exception e) {
-      System.out.println("deu um erro qualquer no saque");
-    }
-
-    System.out.println("Meu saldo final é: " + poupanca.getSaldo());
+      try {
+        if (opcao == 1) {
+          System.out.print("Digite o valor a ser sacado: ");
+          int valor = scanner.nextInt();
+          poupanca.sacar(valor);
+          System.out.println("Valor sacado com sucesso");
+        }
+        if (opcao == 2) {
+          System.out.print("Digite o valor a ser depositado: ");
+          int valor = scanner.nextInt();
+          poupanca.depositar(valor);
+          System.out.println("Valor depositado com sucesso");
+        }
+      } catch (Exception e) {
+        System.out.println("Ocorreu um erro." + e.getMessage());
+      }
+    } while (opcao != 0);
+    System.out.print("Saindo do sistema");
   }
-
 }
 
 /*

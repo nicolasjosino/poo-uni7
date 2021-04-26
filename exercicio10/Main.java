@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class Main {
   public static void main(String[] args) {
+    Poupanca poupanca = new Poupanca();
     Scanner scanner = new Scanner(System.in);
 
     int opcao = 0;
@@ -14,15 +15,25 @@ public class Main {
       opcao = scanner.nextInt();
 
       if (opcao == 1) {
-        opcao1();
+        int valor = scanner.nextInt();
+        poupanca.sacar(valor);
       }
       if (opcao == 2) {
-        
+        int valor = scanner.nextInt();
+        poupanca.depositar(valor);
       }
     } while (opcao != 0);
-  }
-
-  public static void opcao1() {
-    System.out.println("OP 1");
+    System.out.print("Saindo do sistema");
   }
 }
+
+
+/*
+1 - Reaproveite a classe ContaPoupanca feita no último exercicio e 
+
+construa um menu, utilizando a classe Scanner, que permita o usuário 
+- depositar e 
+- sacar valores de sua conta. 
+
+Sua implementação deve tratar possíveis exceções que podem acontecer durante a operação do sistema, considerando exceções verificadas e não verificadas.
+*/
