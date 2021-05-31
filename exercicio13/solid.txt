@@ -1,0 +1,13 @@
+S - Principio da responsabilidade única
+ - é violado quando nós temos métodos de funcionalidades totalmente distintas numa mesma classe.
+O - Principio aberto/fechado (open closed)
+ - aberto para extensão, mas fechado para modificações
+L - Principio da substituição de Liskov 
+ - uma subclasse pode ser substituida por sua superclasse
+I - Principio da segregação de interfaces
+- uma classe não deve ser obrigada a implementar mais métodos do que o necessário... resolvemos isso quebrando uma interface em interfaces menores
+D - Principio da inversão de dependencias
+ - dependa de abstrações e não de implementações
+ 1 - classes de alto nível não devem depender de classes de baixo nível.
+     - as classses de alto nível devem depender apenas de outras classes de alto nivel
+ 2 - as abstrações não dependem de detalhes de implementação. detalhes é quem devem depender das abstrações.
