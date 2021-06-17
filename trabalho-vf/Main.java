@@ -31,4 +31,8 @@ public class Main {
  * original foi levado a uma nova classe MotorCombustao. Agora é possível, por
  * exemplo, criar uma classe MotorEletrico que implemente a interface Motor(), e
  * assim instanciar carros com motor elétrico.
+ * A solução também adere aos princípios de Liskov, pois permite a a substituição
+ * do tipo Motor por seus subtipos (ex.: MotorCombustao, MotorEletrico), e também 
+ * ao princípio Open-Closed, por permitir a extensão do uso do atributo nas classe
+ * Veiculo.
  */
