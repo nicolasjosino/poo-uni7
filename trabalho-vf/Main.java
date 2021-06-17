@@ -22,3 +22,13 @@ public class Main {
         joao.estacionar();
     }
 }
+
+/*
+ * No código encontra-se uma violação do princípio de Inversão de Independência
+ * com a classe Motor, pois a classe Carro (alto nível) depende do mesmo (baixo
+ * nível), porém de forma muito específica. A solução foi tornar Motor uma
+ * interface, com os métodos ligar(), desligar() e melhorarMotor(), e o conteúdo
+ * original foi levado a uma nova classe MotorCombustao. Agora é possível, por
+ * exemplo, criar uma classe MotorEletrico que implemente a interface Motor(), e
+ * assim instanciar carros com motor elétrico.
+ */
